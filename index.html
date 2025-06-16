@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>WW3 Coin | العملة النووية</title>
+<link href="images/logo.png" rel="icon"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar">
+<img alt="WW3 Logo" class="logo" src="images/logo.png"/>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="whitepaper.html">Whitepaper</a></li><li><a href="news.html">Nuclear News</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="download.html">Download Miner</a></li><li class="translate-li"><div id="google_translate_element"></div></li></ul>
+<div class="nav-social">
+<a href="#" target="_blank"><img class="social-icon" src="images/social-x.svg" title="X/Twitter"/></a>
+<a href="#" target="_blank"><img class="social-icon" src="images/social-tg.svg" title="Telegram"/></a>
+<a href="#" target="_blank"><img class="social-icon" src="images/social-dc.svg" title="Discord"/></a>
+</div>
+</nav>
+<main>
+<section class="hero">
+<img alt="WW3 Logo" class="hero-logo" src="images/logo.png"/>
+<h1 class="hero-title">WW3 Coin</h1>
+<p class="hero-desc">The world's nuclear-themed cryptocurrency with a unique quad‑hybrid mining algorithm.</p>
+<div class="countdown-box red" id="countdownBox" style="margin-top:1.8rem;"><div class="countdown glow red" id="countdown"></div></div><a class="btn-glow download-btn" href="download.html">Start Mining Now</a>
+</section>
+</main>
+<footer>
+<span>جميع الحقوق محفوظة © WW3 2025</span>
+</footer>
+<script src="js/countdown.js"></script>
+<script src="js/scroll.js"></script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'ar', includedLanguages: 'en,ar,fr,es,de,ru,zh,hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function fixLanguageLabel(){
+  var combo = document.querySelector('#google_translate_element select');
+  if(combo){
+    var firstOpt = combo.querySelector('option[selected]') || combo.options[0];
+    firstOpt.innerHTML = 'Languages';
+  }
+}
+window.addEventListener('load', function(){
+  setTimeout(fixLanguageLabel, 1000);
+});
+</script></body>
+</html>

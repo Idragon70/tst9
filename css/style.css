@@ -1,0 +1,188 @@
+
+body {
+  margin: 0;
+  font-family: "Tajawal", Arial, sans-serif;
+  background: #181310 url('../images/background.png') no-repeat center top fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #DEC18A;
+}
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(36,28,18,0.95);
+  padding: .8rem 2.5rem; box-shadow: 0 2px 18px #0006; position: sticky; top: 0; z-index: 1000;
+}
+.logo { height: 54px; filter: drop-shadow(0 0 16px #FFD70099); animation: logo-anim 2.4s infinite alternate;}
+@keyframes logo-anim { from{transform:scale(1) rotate(-6deg);} to{transform:scale(1.06) rotate(5deg);} }
+.nav-links { list-style: none; display: flex; gap: 2.2rem; margin: 0; }
+.nav-links li a { color: #FFD700; font-size: 1.15rem; font-weight:500; transition: color .19s; }
+.nav-links li a:hover { color: #fffbe9; }
+.nav-social { display: flex; gap: 12px; }
+.social-icon { width: 30px; height: 30px; filter: drop-shadow(0 0 7px #FFD70055); transition: transform .15s;}
+.social-icon:hover { transform: scale(1.18) rotate(-6deg);}
+.hero { text-align: center; padding: 5rem 1rem 2rem 1rem; min-height: 60vh; }
+.hero-logo { width: 120px; filter: drop-shadow(0 0 60px #ffd70033); margin-bottom: 10px; animation: logo-spin 6s linear infinite alternate;}
+@keyframes logo-spin {0%{transform: rotate(-8deg);}100%{transform:rotate(8deg);}}
+.hero-title { font-size: 2.8rem; margin: 0.5rem 0; }
+.hero-desc { font-size: 1.2rem; margin: 0.8rem 0 2rem 0; color: #FFD700; letter-spacing: 1px; }
+.countdown { font-size: 2.1rem; margin: 1.6rem 0 2rem 0; font-weight: bold; }
+.glow { animation: glow 1.9s infinite alternate; }
+@keyframes glow { from { box-shadow: 0 0 12px #ffd70022; } to { box-shadow: 0 0 40px #ffd70099; } }
+.btn-glow, .download-btn {
+  display: inline-block; padding: 1rem 2.8rem; border-radius: 2.3rem; background: #FFD700;
+  color: #412515; font-size: 1.2rem; font-weight: bold; border: none; text-decoration: none;
+  box-shadow: 0 4px 24px #ffd70045; transition: background .19s, color .18s, box-shadow .16s;
+}
+.btn-glow:hover, .download-btn:hover { background: #fffbe9; color: #FFD700; box-shadow: 0 0 30px #FFD700b0; }
+footer { text-align: center; padding: 1.5rem 0; background: #241d13; color: #DEC18A; }
+.news-list { max-width: 750px; margin: 2.5rem auto; padding: 0 1rem; }
+.news-block {
+  background: rgba(30,25,19,0.80); border-radius: 19px; box-shadow: 0 2px 24px #0007;
+  margin-bottom: 2.2rem; padding: 1.7rem 1.7rem 1.2rem 1.7rem;
+  animation: fadeInUp 0.9s; border-right: 6px solid #FFD70033; position: relative; overflow: hidden;
+}
+.news-block::before {
+  content: ""; display: block; position: absolute; right: 0; top: 0; width: 6px; height: 100%;
+  background: linear-gradient(to bottom, #FFD70099, transparent); border-radius: 0 14px 14px 0;
+}
+.news-title { font-size: 1.20rem; font-weight: bold; color: #DEC18A; }
+.news-type { font-size: .95rem; color: #ffd700; margin-right: 7px; font-weight: 500; }
+.news-meta { font-size: 0.98rem; color: #f7d180c4; margin-top: 0.45rem; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.news-date { color: #FFD700b2; font-size: 0.98rem; }
+.news-src { font-size: 12px; color: #FFD700; margin-right: 6px; border-radius: 5px; padding: 2px 7px; background: #312c18c7; }
+@keyframes fadeInUp {from{opacity:0;transform:translateY(45px);} to{opacity:1;transform:translateY(0);} }
+::-webkit-scrollbar {width: 9px; background: #202125;}::-webkit-scrollbar-thumb {background: #FFD70099; border-radius: 20px;}
+
+/* --- Countdown color states --- */
+.countdown.red { color: #FF4444; }
+.countdown.green { color: #00C853; }
+/* Add space above countdown when placed under the button */
+.countdown { margin-top: 2rem; }
+
+.faq-item {background:#241d13;padding:1rem 1.4rem;border-radius:12px;margin:1rem 0;color:#DEC18A;box-shadow:0 2px 12px #0006;}
+.faq-item summary {cursor:pointer;font-weight:600;color:#FFD700;}
+.translate {margin-left:1rem;}
+
+/* === Footer stick to bottom using flex layout === */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* subtle background movement */
+  background-position: center top;
+  animation: bgMove 60s infinite alternate ease-in-out;
+}
+@keyframes bgMove {
+  0%   { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+footer {
+  margin-top: auto;   /* push footer to bottom */
+}
+
+/* Optional glowing overlay */
+body::after {
+  content:'';
+  position: fixed;
+  top:0;left:0;right:0;bottom:0;
+  pointer-events:none;
+  background: radial-gradient(circle at center, transparent 0%, #ffd70011 60%, transparent 100%);
+  animation:pulseBg 7s infinite alternate;
+}
+@keyframes pulseBg {
+  from {opacity: 0.15;}
+  to   {opacity: 0.35;}
+}
+
+/* Style Google Translate dropdown to match theme */
+.translate-li #google_translate_element select{
+  background:#241d13;
+  color:#FFD700;
+  border:none;
+  padding:4px 6px;
+  border-radius:6px;
+  font-family:inherit;
+}
+.goog-logo-link,.goog-te-gadget span{display:none !important;}
+
+/* Replace 'Select Language' with 'Languages' */
+#google_translate_element span, #google_translate_element a { color:#FFD700 !important; }
+#google_translate_element select option { color:#000; }
+.goog-te-gadget {
+  font-family: inherit !important;
+}
+.goog-te-gadget .goog-te-combo {
+  background:#241d13;
+  color:#FFD700;
+  border:none;
+  padding:4px 6px;
+  border-radius:6px;
+}
+
+.wp-section{max-width:900px;margin:3rem auto;text-align:center;animation:fadeIn 1.2s;}
+.wp-section h2{color:#FFD700;font-size:2.2rem;margin-bottom:1rem;}
+.wp-section h3{color:#FFD700;font-size:1.35rem;margin:1.4rem 0 .4rem;}
+.wp-section p{color:#DEC18A;font-size:1.05rem;line-height:1.6;margin:0.2rem 0;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+
+/* ================= Download button hot ================= */
+.download-btn-hot{
+  display:inline-block;
+  padding:1.3rem 3rem;
+  font-size:1.15rem;
+  font-weight:600;
+  color:#151308;
+  background:#FFD700;
+  border:2px solid transparent;
+  border-radius:8px;
+  text-decoration:none;
+  transition:all .35s ease;
+  position:relative;
+  overflow:hidden;
+}
+.download-btn-hot:hover{
+  color:#FFD700;
+  background:transparent;
+  border-color:#FFD700;
+  box-shadow:0 0 12px #ffd70066;
+}
+.download-btn-hot::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border:2px solid #FFD700;
+  border-radius:8px;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .35s ease;
+}
+.download-btn-hot:hover::before{
+  transform:scaleX(1);
+}
+
+/* ================= Countdown box ================= */
+.countdown-box{
+  display:inline-block;
+  padding:.4rem 1.2rem;
+  background:rgba(0,0,0,.6);
+  border-radius:6px;
+  box-shadow:0 0 18px #FFD70033 inset, 0 0 12px #FFD70055;
+}
+.countdown-box.red{color:#FF4444;}
+.countdown-box.green{color:#00C853;}
+
+/* Hide 'Powered by' text under Google translate widget */
+#google_translate_element a{display:none !important;}
+#google_translate_element span{display:none !important;}
+/* Adjust select font-size to match nav links */
+#google_translate_element select{
+  font-size:1.15rem;
+  background:#241d13;
+  color:#FFD700;
+  border:none;
+  padding:4px 10px;
+  border-radius:6px;
+}

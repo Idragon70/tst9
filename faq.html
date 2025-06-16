@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>FAQ | WW3 Coin</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar">
+<img alt="WW3 Logo" class="logo" src="images/logo.png"/>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="whitepaper.html">Whitepaper</a></li><li><a href="news.html">Nuclear News</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="download.html">Download Miner</a></li><li class="translate-li"><div id="google_translate_element"></div></li></ul>
+<div class="nav-social">
+<a href="#"><img alt="X" class="social-icon" src="images/social-x.svg"/></a>
+<a href="#"><img alt="Telegram" class="social-icon" src="images/social-tg.svg"/></a>
+<a href="#"><img alt="Discord" class="social-icon" src="images/social-dc.svg"/></a>
+</div>
+</nav>
+<main>
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem;">
+<h2 style="color:#FFD700;text-align:center;">Frequently Asked Questions</h2>
+<details class="faq-item"><summary>What is WW3 Coin?</summary>
+<p>WW3 Coin is the world's first nuclear‑themed cryptocurrency symbolically tied to the global number of nuclear warheads and powered by a unique hybrid mining algorithm.</p>
+</details>
+<details class="faq-item"><summary>When does mining start?</summary>
+<p>Mining officially begins the moment the countdown on our homepage reaches zero.</p>
+</details>
+<details class="faq-item"><summary>How do I start mining?</summary>
+<p>Download the WW3Miner software from the <a href="download.html">Download Miner</a> page, install, and follow the guide included.</p>
+</details>
+<details class="faq-item"><summary>Which devices are supported?</summary>
+<p>WW3Miner supports CPU, GPU, NVMe/SSD, and RAM-based hashing within our quad‑hybrid algorithm.</p>
+</details>
+<details class="faq-item"><summary>What is the total supply?</summary>
+<p>Supply is capped at 20,000,000 WW3 coins.</p>
+</details>
+</section>
+</main>
+<footer>© WW3 2025 – All rights reserved</footer>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+<script>
+function fixLanguageLabel(){
+  var combo = document.querySelector('#google_translate_element select');
+  if(combo){
+    var firstOpt = combo.querySelector('option[selected]') || combo.options[0];
+    firstOpt.innerHTML = 'Languages';
+  }
+}
+window.addEventListener('load', function(){
+  setTimeout(fixLanguageLabel, 1000);
+});
+</script></body>
+</html>
