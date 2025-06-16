@@ -106,7 +106,7 @@ body::after {
   border-radius:6px;
   font-family:inherit;
 }
-.goog-logo-link,.goog-te-gadget span{display:none !important;}
+.goog-logo-link,.goog-logo-link img, span{display:none !important;}
 
 /* Replace 'Select Language' with 'Languages' */
 #google_translate_element span, #google_translate_element a { color:#FFD700 !important; }
